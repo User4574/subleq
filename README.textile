@@ -1,0 +1,44 @@
+h1. subleq assembler and emulator
+
+An assembler and emulator for the subleq OISC(One Instruction Set Computer) from "Wikipedia":https://en.wikipedia.org/wiki/One_instruction_set_computer#Subtract_and_branch_if_less_than_or_equal_to_zero.
+
+h2. Why?
+
+I got bored.
+
+h2. What does it do?
+
+There are two programs included.
+
+h3. as
+
+as is the subleq compiler. It will take an assembly file and assemble it into emu machine code.
+
+Run it as @./as <input file> <output file>@.
+
+You can use any of instructions on Wikipedia, along with:
+
+* NOP: Do nothing
+* SUBLEQ: This instruction will be inserted into the output verbatim. If c is not given, it is assumed to be the next instruction.
+* HALT: Stop the machine
+* DATA: This can take up to three arguments, which will be inserted verbatim. Arguments not given will be assumed zero.
+
+h3. emu
+
+emu is the subleq computer emulator.
+
+Run it as @./emu <machine code file>@
+
+The file will be mutated to represent the state of memory after the execution.
+
+h2. Building
+
+Compile everything with @make@, or @make as@ and @make emu@. Clean up with @make clean@.
+
+h2. Bugs
+
+@not@ is not yet implemented, as I haven't gotten around to converting it from subleq2 to subleq. PR accepted.
+
+h2. Future work
+
+More Instructions! PR accepted!
