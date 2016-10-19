@@ -26,7 +26,7 @@ void out(FILE* file, int a, int b, int c) {
 
 void preamble(FILE* file) {
   // Jump over Z
-  out(file, 1, 1, PLEN);
+  out(file, Z, Z, PLEN);
   // Z
   out(file, 0, 0, 0);
 }
